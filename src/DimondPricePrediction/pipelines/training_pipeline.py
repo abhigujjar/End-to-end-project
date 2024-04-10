@@ -1,8 +1,8 @@
 from src.DimondPricePrediction.components.data_ingestion import DataIngestion
 
-#from src.DimondPricePrediction.components.data_transformation import DataTransformation
+from src.DimondPricePrediction.components.data_transformation import DataTransformation
 
-#from src.DimondPricePrediction.components.model_trainer import ModelTrainer
+from src.DimondPricePrediction.components.model_trainer import ModelTrainer
 
 #from src.DimondPricePrediction.components.model_evaluation import ModelEvaluation
 
@@ -13,11 +13,9 @@ from src.DimondPricePrediction.logger import logging
 from src.DimondPricePrediction.exception import customexception
 import pandas as pd
 
-obj=DataIngestion()
-obj.initiate_data_ingestion()
 
 
-'''class TrainingPipeline:
+class TrainingPipeline:
     def start_data_ingestion(self):
         try:
             data_ingestion=DataIngestion()
@@ -48,4 +46,4 @@ obj.initiate_data_ingestion()
             train_arr,test_arr=self.start_data_transformation(train_data_path,test_data_path)
             self.start_model_training(train_arr,test_arr)
         except Exception as e:
-            raise customexception(e,sys)'''
+            raise customexception(e,sys)
